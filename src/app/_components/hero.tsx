@@ -19,7 +19,7 @@ const Hero = () => {
       <div className="flex flex-col justify-center w-full lg:w-2/3 p-8 lg:p-16">
         <div className="mb-8">
           <Image
-            src="/images/logo.webp"
+            src="/images/logo.png"
             alt="Ekuphumleni Logo"
             width={620}
             height={476}
