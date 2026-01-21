@@ -27,7 +27,17 @@ const Navigation = () => {
       <Container>
         <div className="">
           {/* Desktop Navigation */}
-          <div className="hidden md:flex justify-end items-center h-16">
+          <div className="hidden md:flex justify-between items-center h-16">
+            <Link href="/">
+              <span className="sr-only">Ekuphumleni Home</span>
+              <Image
+                src="/images/logo.webp"
+                alt="Ekuphumleni Logo"
+                width={150}
+                height={50}
+                className="object-cover w-20"
+              />
+            </Link>
            
             <nav className="hidden md:flex gap-4 items-center">
               {links.map((link) => (
