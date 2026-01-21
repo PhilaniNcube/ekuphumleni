@@ -4,44 +4,44 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export function ContactInfo() {
   return (
-    <section className="py-16">
+    <section className="py-16 bg-brand-cream">
       <Container>
         <div className="grid gap-8 md:grid-cols-3">
-          <Card>
+          <Card className="bg-brand-light-green">
             <CardContent className="pt-6 flex flex-col items-center text-center gap-4">
-              <div className="p-3 rounded-full bg-primary/10 text-primary">
+              <div className="p-3 rounded-full bg-brand-light-cream text-brand-orange-yellow">
                 <User className="h-6 w-6" />
               </div>
               <div>
-                <h3 className="font-semibold mb-1">Chairperson</h3>
-                <p className="text-muted-foreground">Ayanda Xalabile</p>
+                <h3 className="font-semibold mb-1 text-brand-white">Chairperson</h3>
+                <p className="text-brand-white">Ayanda Xalabile</p>
               </div>
             </CardContent>
           </Card>
 
-          <Card>
+          <Card className="bg-brand-light-green">
             <CardContent className="pt-6 flex flex-col items-center text-center gap-4">
-              <div className="p-3 rounded-full bg-primary/10 text-primary">
+              <div className="p-3 rounded-full bg-brand-light-cream text-brand-orange-yellow">
                 <Mail className="h-6 w-6" />
               </div>
               <div>
-                <h3 className="font-semibold mb-1">Email</h3>
-                <a href="mailto:ayandaxalabile44@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
+                <h3 className="font-semibold mb-1 text-brand-white">Email</h3>
+                <a href="mailto:ayandaxalabile44@gmail.com" className="text-brand-white hover:text-brand-light-green transition-colors">
                   ayandaxalabile44@gmail.com
                 </a>
               </div>
             </CardContent>
           </Card>
 
-          <Card>
+          <Card className="bg-brand-light-green">
             <CardContent className="pt-6 flex flex-col items-center text-center gap-4">
-              <div className="p-3 rounded-full bg-primary/10 text-primary">
+              <div className="p-3 rounded-full bg-brand-light-cream text-brand-orange-yellow  ">
                 <MapPin className="h-6 w-6" />
               </div>
               <div className="space-y-4">
                 <div>
-                  <h3 className="font-semibold mb-1">Physical Address</h3>
-                  <p className="text-muted-foreground text-sm">
+                  <h3 className="font-semibold mb-1 text-brand-white">Physical Address</h3>
+                  <p className="text-brand-white text-sm">
                     9956 Sthweti Street<br />
                     Joe Slovo<br />
                     Despatch<br />
@@ -49,8 +49,8 @@ export function ContactInfo() {
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-1">Postal Address</h3>
-                  <p className="text-muted-foreground text-sm">
+                  <h3 className="font-semibold mb-1 text-brand-white">Postal Address</h3>
+                  <p className="text-brand-white text-sm">
                     25 Rulwa Street<br />
                     Joe Slovo<br />
                     Despatch<br />

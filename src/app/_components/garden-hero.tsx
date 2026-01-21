@@ -10,7 +10,7 @@ export const GardenHero = () => {
           src="/images/plants.jpg"
           alt="Community Garden"
           fill
-          className="object-cover rounded-br-[50%]"
+          className="object-cover lg:rounded-br-[50%]"
           priority
         />
       </div>
@@ -19,35 +19,36 @@ export const GardenHero = () => {
       <div className="flex flex-col justify-center items-center w-full lg:w-2/3 px-8 lg:px-16">
         <div className="">
           <Image
-            src="/images/logo.png"
+            src="/images/logo.webp"
             alt="Ekuphumleni Logo"
             width={620}
             height={476}
-            className="object-contain"
+            className="object-contain w-full h-auto"
           />
+          <p className="text-lg md:text-xl text-brand-grey font-bold text-center">
+            Veggie Garden, Meals, Creche, and Church Services
+          </p>
         </div>
 
         <div className="flex flex-col items-center justify-center">
-          <h1 className="text-4xl font-bold text-[#2E7D32] mt-4 mb-2 text-center uppercase tracking-wide">
-            Community Garden 
+          <h1 className="text-3xl lg:text-4xl font-bold text-brand-dark-green mt-4 mb-2 text-center tracking-wide">
+            Veggie Garden <br /> WORKSHOP
           </h1>
 
-          <p className="text-lg text-gray-700 text-center mb-4 font-medium">
-          How to care for, and grow your own food
+          <p className="text-lg md:text-xl font-medium text-brand-grey text-center">
+            How to care for, and grow your own veggies
           </p>
 
           <div className="mb-6">
-            <p className="text-sm sm:text-lg md:text-xl font-medium text-center">
-              <span className="text-[#2E7D32]">FRESH PRODUCE</span>
-              <span className="text-[#F5A623] mx-2">•</span>
-              <span className="text-[#F5A623]">SKILLS DEVELOPMENT</span>
-              <span className="text-[#F5A623] mx-2">•</span>
-              <span className="text-[#2E7D32]">SUSTAINABILITY</span>
-              <span className="text-[#F5A623] mx-2">•</span>
-              <span className="text-[#2E7D32]">COMMUNITY</span>
-            </p>
-            <p className="text-[#C4A962] text-lg mt-2 text-center">
-              - OPEN DAILY -
+            <p className="text-lg lg:text-xl text-brand-olive-green text-center mb-4 text-balance font-medium max-w-[55ch] mx-auto">
+              &quot;Unlock the Power of Your Own Garden: Join our Free Veggie
+              Garden Workshop!&quot; <br />
+              This workshop is designed for people in rural areas who want to
+              grow their own food in their small garden, improve their
+              nutrition, and save money on nutritious food. We&apos;ll cover
+              everything from choosing the right vegetables to planting, caring
+              for your garden, and harvesting your bounty. Let&apos;s grow
+              together!
             </p>
           </div>
         </div>

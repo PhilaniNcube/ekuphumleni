@@ -2,12 +2,12 @@ import Container from "@/components/container";
 
 export function TeamGovernance() {
   return (
-    <section className="py-16 bg-muted/30">
+    <section className="py-16 bg-brand-light-green/10">
       <Container>
         <div className="max-w-3xl mx-auto space-y-6">
-          <h2 className="text-3xl font-bold text-center">Our Team & Governance</h2>
+          <h2 className="text-3xl font-bold text-center text-brand-dark-green">Our Team & Governance</h2>
           <div className="prose prose-gray dark:prose-invert max-w-none text-center">
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-brand-grey">
               Led by our dedicated Chairperson, <strong>Ayanda Xalabile</strong>, our organization is composed of 90% women and 10% men.
             </p>
             <p className="text-muted-foreground">

@@ -10,7 +10,7 @@ export const CrecheHero = () => {
           src="/images/creche.jpg"
           alt="Community Creche"
           fill
-          className="object-cover rounded-bl-[50%] scale-x-[-1]"
+          className="object-cover lg:rounded-bl-[50%] scale-x-[-1]"
           priority
         />
       </div>
@@ -19,20 +19,23 @@ export const CrecheHero = () => {
       <div className="flex flex-col justify-center items-center w-full lg:w-2/3 px-8 lg:px-16">
         <div className="">
           <Image
-            src="/images/logo.png"
+            src="/images/logo.webp"
             alt="Ekuphumleni Logo"
             width={620}
             height={476}
-            className="object-contain"
+            className="object-contain w-full h-auto"
           />
         </div>
+        <p className="text-lg md:text-xl text-brand-grey font-bold text-center">
+          Veggie Garden, Meals, Creche, and Church Services
+        </p>
 
         <div className="flex flex-col items-center justify-center">
-          <h1 className="text-4xl font-bold text-[#2E7D32] mt-4 mb-2 text-center uppercase tracking-wide">
-            Community Creche
+          <h1 className="text-4xl lg:text-5xl font-bold text-brand-dark-green mt-4 mb-2 text-center tracking-wide">
+            COMMUNITY <br /> Creche
           </h1>
 
-          <p className="text-lg text-gray-700 text-center mb-4 font-medium">
+          <p className="text-lg lg:text-2xl text-brand-olive-green text-center mb-4 text-balance font-medium max-w-[55ch] mx-auto">
             Our creche focuses on providing a safe and nurturing environment for
             learning,especially for our children from impoverished backgrounds -
             it is crucial for their development and future success.

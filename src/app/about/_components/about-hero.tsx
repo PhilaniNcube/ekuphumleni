@@ -2,10 +2,10 @@ import Container from "@/components/container";
 
 export function AboutHero() {
   return (
-    <section className="py-16 bg-muted/30">
+    <section className="py-16 bg-brand-cream">
       <Container>
         <div className="max-w-3xl mx-auto text-center space-y-4">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-brand-dark-green">
             Our Story: Building a Stronger Ekuphumleni Joe Slovo
           </h1>
           <p className="text-xl text-muted-foreground">

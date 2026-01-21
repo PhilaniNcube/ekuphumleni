@@ -17,14 +17,14 @@ const partners = [
 
 export function Partners() {
   return (
-    <section className="py-16">
+    <section className="py-16 bg-brand-cream">
       <Container>
-        <h2 className="text-3xl font-bold text-center mb-12">Our Partners</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 text-brand-dark-green">Our Partners</h2>
         <div className="flex flex-wrap justify-center gap-4 md:gap-8">
           {partners.map((partner, index) => (
             <div 
               key={index} 
-              className="px-6 py-3 bg-muted rounded-full font-medium text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+              className="px-6 py-3 bg-brand-light-green rounded-full font-medium text-brand-cream hover:bg-brand-orange-yellow hover:text-brand-dark-green transition-colors"
             >
               {partner}
             </div>

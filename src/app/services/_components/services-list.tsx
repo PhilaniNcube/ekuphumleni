@@ -69,33 +69,33 @@ const services: Service[] = [
 
 export function ServicesList() {
   return (
-    <section className="py-16">
+    <section className="py-8 bg-brand-cream">
       <Container>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
-            <Card key={index} className="flex flex-col h-full">
+            <Card key={index} className="flex flex-col h-full bg-brand-dark-green">
               <CardHeader>
-                <CardTitle className="text-xl mb-2">{service.title}</CardTitle>
+                <CardTitle className="text-xl mb-2 text-brand-cream">{service.title}</CardTitle>
               </CardHeader>
               <CardContent className="flex-1 flex flex-col gap-4">
                 <div>
-                  <h4 className="font-semibold text-sm mb-1 text-primary">Description</h4>
-                  <p className="text-sm text-muted-foreground">
+                  <h4 className="font-semibold text-sm mb-1 text-brand-cream">Description</h4>
+                  <p className="text-sm text-brand-cream">
                     {service.description}
                   </p>
                 </div>
                 
                 <div>
-                  <h4 className="font-semibold text-sm mb-1 text-primary">Impact</h4>
-                  <p className="text-sm text-muted-foreground">
+                  <h4 className="font-semibold text-sm mb-1 text-brand-cream">Impact</h4>
+                  <p className="text-sm text-brand-cream">
                     {service.impact}
                   </p>
                 </div>
 
                 {service.beneficiaries && (
-                  <div className="mt-auto pt-4 border-t">
-                    <h4 className="font-semibold text-sm mb-1 text-primary">Beneficiaries</h4>
-                    <p className="text-xs text-muted-foreground font-medium">
+                  <div className="mt-auto pt-4 border-t border-brand-olive-green">
+                    <h4 className="font-semibold text-sm mb-1 text-brand-cream">Beneficiaries</h4>
+                    <p className="text-xs text-brand-cream font-medium">
                       {service.beneficiaries}
                     </p>
                   </div>

@@ -46,16 +46,16 @@ const objectives = [
 
 export function Objectives() {
   return (
-    <section className="py-16">
+    <section className="py-16 bg-brand-cream">
       <Container>
-        <h2 className="text-3xl font-bold text-center mb-12">Our Objectives</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 text-brand-dark-green">Our Objectives</h2>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {objectives.map((obj, index) => (
-            <div key={index} className="flex gap-4 p-4 rounded-lg border bg-card text-card-foreground shadow-sm">
-              <CheckCircle2 className="h-6 w-6 text-primary shrink-0" />
+            <div key={index} className="flex gap-4 p-4 rounded-lg bg-brand-light-green shadow-sm">
+              <CheckCircle2 className="h-6 w-6 text-brand-cream shrink-0" />
               <div>
-                <h3 className="font-semibold mb-2">{obj.title}</h3>
-                <p className="text-sm text-muted-foreground">{obj.description}</p>
+                <h3 className="font-semibold mb-2 text-brand-cream">{obj.title}</h3>
+                <p className="text-sm text-brand-cream">{obj.description}</p>
               </div>
             </div>
           ))}

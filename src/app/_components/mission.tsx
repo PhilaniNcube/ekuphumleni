@@ -51,28 +51,28 @@ const Mission = () => {
   ];
 
   return (
-    <section className="py-16 bg-brand-cream">
+    <section className="py-16 bg-brand-dark-green">
       <Container>
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold mb-6 text-primary">Our Mission</h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <h2 className="text-3xl font-bold mb-6 text-brand-cream">Our Mission</h2>
+          <p className="text-lg text-brand-white leading-relaxed">
             Welcome to Ekuphumleni Joe Slovo Community Projects, an organization deeply committed to uplifting our community in Despatch, Ward 41. Born from a vision to combat unemployment, poverty, crime, and social ills, we are a beacon of hope and progress. Primarily led by women, our initiatives span from nourishing our community with fresh produce to empowering youth and caring for the vulnerable.
           </p>
         </div>
 
         <div className="mb-16">
-          <h3 className="text-2xl font-bold mb-8 text-center">Our Core Values & Focus Areas</h3>
+          <h3 className="text-2xl font-bold mb-8 text-center text-brand-cream">Our Core Values & Focus Areas</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {coreValues.map((value, index) => (
-              <Card key={index} className="bg-brand-cream border-none shadow-md hover:shadow-lg transition-shadow h-full">
+              <Card key={index} className="bg-brand-cream border-none shadow-md text-brand-light-green hover:shadow-lg transition-shadow h-full">
                 <CardHeader>
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4 text-primary">
-                    <value.icon className="w-6 h-6" />
+                    <value.icon className="w-6 h-6 text-brand-light-green" />
                   </div>
                   <CardTitle className="text-xl mb-2">{value.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-base text-gray-700">{value.description}</CardDescription>
+                  <CardDescription className="text-base text-brand-dark-green">{value.description}</CardDescription>
                 </CardContent>
               </Card>
             ))}
@@ -80,18 +80,18 @@ const Mission = () => {
         </div>
 
         <div>
-          <h3 className="text-2xl font-bold mb-8 text-center">Impact & Highlights</h3>
+          <h3 className="text-2xl font-bold mb-8 text-center text-brand-cream">Impact & Highlights</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {highlights.map((item, index) => (
-              <Card key={index} className="bg-brand-cream border-none h-full">
+              <Card key={index} className="bg-brand-cream border-none h-full text-brand-light-green">
                 <CardHeader>
                    <div className="flex items-center gap-3 mb-2">
-                    <item.icon className="w-5 h-5 text-primary" />
-                    <CardTitle className="text-lg">{item.title}</CardTitle>
+                    <item.icon className="w-5 h-5 text-brand-light-green" />
+                    <CardTitle className="text-lg text-brand-dark-green">{item.title}</CardTitle>
                    </div>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-gray-700">{item.description}</CardDescription>
+                  <CardDescription className="text-brand-dark-green text-base">{item.description}</CardDescription>
                 </CardContent>
               </Card>
             ))}

@@ -1,4 +1,4 @@
-import { CrecheHero } from "./_components/creche-hero";
+
 import Hero from "./_components/hero";
 import Mission from "./_components/mission";
 

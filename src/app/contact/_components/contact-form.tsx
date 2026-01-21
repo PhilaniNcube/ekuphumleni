@@ -49,17 +49,17 @@ export function ContactForm() {
   }
 
   return (
-    <section className="py-16">
+    <section className="py-16 bg-brand-cream">
       <Container>
         <div className="max-w-2xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">Send us a Message</h2>
+          <h2 className="text-3xl font-bold text-center mb-8 text-brand-dark-green">Send us a Message</h2>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
               <FormField
                 control={form.control}
                 name="name"
                 render={({ field }) => (
-                  <FormItem>
+                  <FormItem className="border-b-2 border-brand-dark-green/20 pb-2">
                     <FormLabel>Name</FormLabel>
                     <FormControl>
                       <Input placeholder="Your name" {...field} />
@@ -72,7 +72,7 @@ export function ContactForm() {
                 control={form.control}
                 name="email"
                 render={({ field }) => (
-                  <FormItem>
+                  <FormItem className="border-b-2 border-brand-dark-green/20 pb-2">
                     <FormLabel>Email</FormLabel>
                     <FormControl>
                       <Input placeholder="your.email@example.com" {...field} />
@@ -85,7 +85,7 @@ export function ContactForm() {
                 control={form.control}
                 name="subject"
                 render={({ field }) => (
-                  <FormItem>
+                  <FormItem className="border-b-2 border-brand-dark-green/20 pb-2">
                     <FormLabel>Subject</FormLabel>
                     <FormControl>
                       <Input placeholder="What is this regarding?" {...field} />
@@ -98,7 +98,7 @@ export function ContactForm() {
                 control={form.control}
                 name="message"
                 render={({ field }) => (
-                  <FormItem>
+                  <FormItem className="border-b-2 border-brand-dark-green/20 pb-2">
                     <FormLabel>Message</FormLabel>
                     <FormControl>
                       <Textarea 
