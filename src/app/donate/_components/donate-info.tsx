@@ -35,7 +35,7 @@ export function DonateInfo() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {impactAreas.map((area, index) => (
               <div key={index} className="flex gap-4">
-                <div className="flex-shrink-0">
+                <div className="shrink-0">
                   <div className="w-12 h-12 rounded-full bg-brand-orange-yellow/20 flex items-center justify-center">
                     <area.icon className="w-6 h-6 text-brand-dark-green" />
                   </div>
