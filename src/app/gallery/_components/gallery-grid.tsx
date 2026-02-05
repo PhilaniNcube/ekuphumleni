@@ -1,13 +1,24 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Image from "next/image";
 import Container from "@/components/container";
 import { GalleryImage } from "@/lib/r2";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
 
 interface GalleryGridProps {
   images: GalleryImage[];
 }
 
 export function GalleryGrid({ images }: GalleryGridProps) {
+  const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
+
   return (
     <section className="py-16 bg-white">
       <Container>
@@ -16,29 +27,49 @@ export function GalleryGrid({ images }: GalleryGridProps) {
             <p>No images found in the gallery yet.</p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {images.map((image, index) => (
-              <div 
-                key={index} 
-                className="group relative aspect-square overflow-hidden rounded-xl bg-gray-100 shadow-md hover:shadow-xl transition-all duration-300"
-              >
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="text-center p-4">
-                    <span className="inline-block px-3 py-1 mb-2 text-xs font-semibold tracking-wider text-white uppercase bg-brand-green rounded-full">
-                      {image.category}
-                    </span>
-                    <h3 className="text-xl font-bold text-white line-clamp-2">{image.alt}</h3>
-                  </div>
+          <>
+            <div className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4">
+              {images.map((image, index) => (
+                <div 
+                  key={index} 
+                  className="break-inside-avoid mb-4 group relative overflow-hidden rounded-xl bg-gray-100 shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer"
+                  onClick={() => setSelectedImage(image)}
+                >
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    width={800}
+                    height={600}
+                    className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+
+            <Dialog open={!!selectedImage} onOpenChange={(open) => !open && setSelectedImage(null)}>
+              <DialogContent className="max-w-[95vw] w-full max-h-[95vh] h-auto p-0 bg-transparent border-none shadow-none overflow-hidden flex flex-col items-center justify-center">
+                 {/* Hidden title/description for accessibility compliance if needed, or structured differently */}
+                <DialogHeader className="sr-only">
+                  <DialogTitle>{selectedImage?.alt || "Gallery Image"}</DialogTitle>
+                  <DialogDescription>Full view of {selectedImage?.alt}</DialogDescription>
+                </DialogHeader>
+                
+                {selectedImage && (
+                  <div className="relative w-full h-full min-h-[50vh] max-h-[90vh] flex items-center justify-center">
+                     <Image
+                      src={selectedImage.src}
+                      alt={selectedImage.alt}
+                      width={1200}
+                      height={800} // providing large default dimensions for aspect ratio handling
+                      className="object-contain w-auto h-auto max-w-full max-h-[85vh] rounded-md shadow-2xl"
+                      priority
+                    />
+                  </div>
+                )}
+              </DialogContent>
+            </Dialog>
+          </>
         )}
       </Container>
     </section>
