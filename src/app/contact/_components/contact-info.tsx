@@ -40,23 +40,12 @@ export function ContactInfo() {
               </div>
               <div className="space-y-4">
                 <div>
-                  <h3 className="font-semibold mb-1 text-brand-white">Physical Address</h3>
+                  <h3 className="font-semibold mb-1 text-brand-white">Location</h3>
                   <p className="text-brand-white text-sm">
-                    9956 Sthweti Street<br />
-                    Joe Slovo<br />
-                    Despatch<br />
-                    6220
+                    Gqeberha / Port Eliabeth
                   </p>
                 </div>
-                <div>
-                  <h3 className="font-semibold mb-1 text-brand-white">Postal Address</h3>
-                  <p className="text-brand-white text-sm">
-                    25 Rulwa Street<br />
-                    Joe Slovo<br />
-                    Despatch<br />
-                    6220
-                  </p>
-                </div>
+                
               </div>
             </CardContent>
           </Card>

@@ -56,7 +56,7 @@ const Mission = () => {
         <div className="text-center mb-16 max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold mb-6 text-brand-cream">Our Mission</h2>
           <p className="text-lg text-brand-white leading-relaxed">
-            Welcome to Ekuphumleni Joe Slovo Community Projects, an organization deeply committed to uplifting our community in Despatch, Ward 41. Born from a vision to combat unemployment, poverty, crime, and social ills, we are a beacon of hope and progress. Primarily led by women, our initiatives span from nourishing our community with fresh produce to empowering youth and caring for the vulnerable.
+            Welcome to Ekuphumleni Joe Slovo Community Projects, an organization deeply committed to uplifting our community in Gqeberha/Port Elizabeth. Born from a vision to combat unemployment, poverty, crime, and social ills, we are a beacon of hope and progress. Primarily led by women, our initiatives span from nourishing our community with fresh produce to empowering youth and caring for the vulnerable.
           </p>
         </div>
 

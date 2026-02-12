@@ -26,7 +26,7 @@ export const GardenHero = () => {
             className="object-contain w-full h-auto"
           />
           <p className="text-lg md:text-xl text-brand-grey font-bold text-center">
-            Veggie Garden, Meals, Creche, and Church Services
+            Veggie Garden, Meals, and Creche
           </p>
         </div>
 

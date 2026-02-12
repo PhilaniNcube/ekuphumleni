@@ -27,7 +27,7 @@ export function AboutHero() {
           />
         </div>
         <p className="text-lg md:text-xl text-brand-grey font-bold text-center">
-          Veggie Garden, Meals, Creche, and Church Services
+          Veggie Garden, Meals, and Creche
         </p>
 
         <div className="flex flex-col items-center justify-center">
