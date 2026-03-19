@@ -25,7 +25,7 @@ export const GardenHero = () => {
             height={476}
             className="object-contain w-full h-auto"
           />
-          <p className="text-lg md:text-xl text-brand-grey font-bold text-center">
+          <p className="text-lg md:text-xl text-brand-grey font-bold text-center font-heading">
             Veggie Garden, Meals, and Creche
           </p>
         </div>

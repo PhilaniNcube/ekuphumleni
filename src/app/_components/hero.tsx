@@ -30,17 +30,17 @@ const Hero = () => {
         <div className="flex flex-col items-center justify-center">
           {/* Services */}
           <div className="mb-6">
-            <p className="text-lg md:text-xl text-brand-grey font-bold text-center">
+            <p className="text-lg md:text-xl text-brand-grey font-bold text-center font-heading">
               Veggie Garden, Meals, and Creche
             </p>
-            <p className="text-sm sm:text-lg md:text-xl lg:text-3xl font-medium text-center mt-7">
+            <p className="text-sm sm:text-lg md:text-xl lg:text-3xl font-medium text-center mt-7 font-heading">
               <span className="text-[#F5A623]">CRECHE</span>
               <span className="text-[#F5A623] mx-2">•</span>
               <span className="text-[#F5A623]">WARM MEALS</span>
               <span className="text-[#F5A623] mx-2">•</span>
               <span className="text-[#F5A623]">VEGGIE GARDEN</span>
             </p>
-            <p className="text-[#C4A962] text-xl lg:text-4xl mt-2 text-center">
+            <p className="text-[#C4A962] text-xl lg:text-4xl mt-2 text-center font-heading">
               - OPEN DAILY -
             </p>
           </div>

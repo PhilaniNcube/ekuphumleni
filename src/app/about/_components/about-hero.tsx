@@ -26,7 +26,7 @@ export function AboutHero() {
             className="object-contain w-full h-auto"
           />
         </div>
-        <p className="text-lg md:text-xl text-brand-grey font-bold text-center">
+        <p className="text-lg md:text-xl text-brand-grey font-bold text-center font-heading">
           Veggie Garden, Meals, and Creche
         </p>
 

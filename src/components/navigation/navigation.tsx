@@ -40,7 +40,7 @@ const Navigation = () => {
               />
             </Link>
            
-            <nav className="hidden md:flex gap-4 items-center">
+            <nav className="hidden md:flex gap-4 items-center font-heading">
               {links.map((link) => (
                 <Link
                   key={link.name}
@@ -68,12 +68,12 @@ const Navigation = () => {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="px-6 py-6 w-[80vw]">
-                <SheetHeader className="mb-8 text-left">
+                <SheetHeader className="mb-8 text-left font-heading">
                   <SheetTitle className="text-brand-dark-green font-bold text-xl uppercase">
                     Ekuphumleni
                   </SheetTitle>
                 </SheetHeader>
-                <nav className="flex flex-col gap-6">
+                <nav className="flex flex-col gap-6 font-heading">
                   {links.map((link) => (
                     <Link
                       key={link.name}
