@@ -10,6 +10,7 @@ export function ContactHero() {
           src="/images/hero_image.png"
           alt="Contact Us"
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover lg:rounded-br-[50%]"
           priority
         />

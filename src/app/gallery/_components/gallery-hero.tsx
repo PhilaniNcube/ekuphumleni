@@ -10,6 +10,7 @@ export function GalleryHero() {
           src="/images/hero_image.png"
           alt="Gallery Background"
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover"
         />
       </div> 

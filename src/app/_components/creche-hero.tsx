@@ -10,6 +10,7 @@ export const CrecheHero = () => {
           src="/images/creche.jpg"
           alt="Community Creche"
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover lg:rounded-bl-[50%] scale-x-[-1]"
           priority
         />
