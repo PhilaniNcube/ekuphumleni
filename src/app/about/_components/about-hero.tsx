@@ -7,8 +7,8 @@ export function AboutHero() {
       {/* Image Section */}
       <div className="relative w-full lg:w-1/3 h-[50vh] lg:h-auto">
         <Image
-          src="/images/hero_image.png"
-          alt="About Ekuphumleni"
+          src="/images/slovo.webp"
+          alt="About Ekuphumleni at Joe Slovo"
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover lg:rounded-br-[50%]"
