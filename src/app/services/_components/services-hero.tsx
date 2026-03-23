@@ -7,8 +7,8 @@ export function ServicesHero() {
       {/* Image Section */}
       <div className="relative w-full lg:w-1/3 h-[50vh] lg:h-auto">
         <Image
-          src="/images/hero_image.png"
-          alt="Our Services"
+          src="/images/sewing.webp"
+          alt="Our Services at Ekuphumleni"
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover lg:rounded-br-[50%]"
