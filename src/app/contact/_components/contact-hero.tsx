@@ -7,7 +7,7 @@ export function ContactHero() {
       {/* Image Section */}
       <div className="relative w-full lg:w-1/3 h-[50vh] lg:h-auto">
         <Image
-          src="/images/hero_image.png"
+          src="/images/pull-up.webp"
           alt="Contact Us"
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
