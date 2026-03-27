@@ -26,6 +26,9 @@ const Hero = () => {
             height={559}
             className="object-contain w-full h-auto"
           />
+          <h3 className="text-2xl md:text-3xl text-[#C4A962] text-center font-heading mt-4">
+            Skills Development Centre
+          </h3>
         </div>
 
         <div className="flex flex-col items-center justify-center">
