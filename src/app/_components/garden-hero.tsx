@@ -44,7 +44,7 @@ export const GardenHero = () => {
             <p className="text-lg lg:text-xl text-brand-olive-green text-center mb-4 text-balance font-medium max-w-[55ch] mx-auto">
               &quot;Unlock the Power of Your Own Garden: Join our Free Veggie
               Garden Workshop!&quot; <br />
-              This workshop is designed for people in rural areas who want to
+              This workshop is designed for people in urban areas who want to
               grow their own food in their small garden, improve their
               nutrition, and save money on nutritious food. We&apos;ll cover
               everything from choosing the right vegetables to planting, caring
