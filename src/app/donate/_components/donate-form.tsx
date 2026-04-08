@@ -2,7 +2,7 @@
 
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
-import { z } from "zod"
+import { toast } from "sonner"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -25,35 +25,14 @@ import {
 } from "@/components/ui/select"
 import Container from "@/components/container"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-
-const formSchema = z.object({
-  donorType: z.enum(["individual", "organization"], {
-    message: "Please select a donor type.",
-  }),
-  name: z.string().min(2, {
-    message: "Name must be at least 2 characters.",
-  }),
-  email: z.string().email({
-    message: "Please enter a valid email address.",
-  }),
-  phone: z.string().min(10, {
-    message: "Please enter a valid phone number.",
-  }),
-  amount: z.string().min(1, {
-    message: "Please enter a donation amount.",
-  }),
-  donationType: z.enum(["once", "monthly"], {
-    message: "Please select a donation type.",
-  }),
-  purpose: z.string().min(1, {
-    message: "Please select a purpose for your donation.",
-  }),
-  message: z.string().optional(),
-})
+import {
+  donateFormSchema,
+  type DonateFormValues,
+} from "@/lib/donate-form-schema"
 
 export function DonateForm() {
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const form = useForm<DonateFormValues>({
+    resolver: zodResolver(donateFormSchema),
     defaultValues: {
       donorType: "individual",
       name: "",
@@ -66,12 +45,38 @@ export function DonateForm() {
     },
   })
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // This is where you would handle form submission
-    // For now, we'll just log it
-    console.log(values)
-    // You would typically send this to a payment processor or backend API
-    alert("Thank you for your donation! We will contact you shortly to complete the transaction.")
+  async function onSubmit(values: DonateFormValues) {
+    const response = await fetch("/api/donate", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(values),
+    })
+
+    const result = (await response.json().catch(() => null)) as
+      | { error?: string }
+      | null
+
+    if (!response.ok) {
+      toast.error(result?.error ?? "Your donation request could not be sent.")
+      return
+    }
+
+    form.reset({
+      donorType: "individual",
+      name: "",
+      email: "",
+      phone: "",
+      amount: "",
+      donationType: "once",
+      purpose: "",
+      message: "",
+    })
+
+    toast.success(
+      "Thank you for your donation interest. We will contact you shortly."
+    )
   }
 
   return (
@@ -238,7 +243,7 @@ export function DonateForm() {
                       <FormControl>
                         <Textarea 
                           placeholder="Add a message or special instructions..." 
-                          className="min-h-[100px]"
+                          className="min-h-25"
                           {...field} 
                         />
                       </FormControl>
@@ -251,8 +256,9 @@ export function DonateForm() {
                   type="submit" 
                   className="w-full bg-brand-dark-green text-brand-white hover:bg-brand-dark-green/90"
                   size="lg"
+                  disabled={form.formState.isSubmitting}
                 >
-                  Complete Donation
+                  {form.formState.isSubmitting ? "Sending..." : "Complete Donation"}
                 </Button>
 
                 <p className="text-sm text-brand-grey text-center">

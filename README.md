@@ -18,6 +18,7 @@ Required environment variables:
 RESEND_API_KEY=re_...
 RESEND_FROM_EMAIL="Ekuphumleni <onboarding@resend.dev>"
 RESEND_CONTACT_TO_EMAIL=hello@example.com
+RESEND_DONATION_TO_EMAIL=donations@example.com
 ```
 
 Notes:
@@ -25,6 +26,7 @@ Notes:
 - `RESEND_API_KEY` is required for the API route to authenticate with Resend.
 - `RESEND_FROM_EMAIL` can use `onboarding@resend.dev` while testing, but production should use a verified sender domain.
 - `RESEND_CONTACT_TO_EMAIL` is the inbox that should receive contact form submissions.
+- `RESEND_DONATION_TO_EMAIL` is optional. If it is omitted, donation form emails will also go to `RESEND_CONTACT_TO_EMAIL`.
 
 To preview emails locally with React Email:
 
