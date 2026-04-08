@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import { Yusei_Magic } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/navigation/navigation";
+import { Toaster } from "@/components/ui/sonner";
 
 const yuseiMagic = Yusei_Magic({
   variable: "--font-yusei-magic",
@@ -96,6 +97,7 @@ export default function RootLayout({
       >
         <Navigation />
         {children}
+        <Toaster />
       </body>
     </html>
   );

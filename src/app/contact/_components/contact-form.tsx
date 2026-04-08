@@ -2,7 +2,7 @@
 
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
-import { z } from "zod"
+import { toast } from "sonner"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -16,25 +16,14 @@ import {
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import Container from "@/components/container"
-
-const formSchema = z.object({
-  name: z.string().min(2, {
-    message: "Name must be at least 2 characters.",
-  }),
-  email: z.string().email({
-    message: "Please enter a valid email address.",
-  }),
-  subject: z.string().min(5, {
-    message: "Subject must be at least 5 characters.",
-  }),
-  message: z.string().min(10, {
-    message: "Message must be at least 10 characters.",
-  }),
-})
+import {
+  contactFormSchema,
+  type ContactFormValues,
+} from "@/lib/contact-form-schema"
 
 export function ContactForm() {
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const form = useForm<ContactFormValues>({
+    resolver: zodResolver(contactFormSchema),
     defaultValues: {
       name: "",
       email: "",
@@ -43,9 +32,26 @@ export function ContactForm() {
     },
   })
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // This is where you would handle form submission
-    console.log(values)
+  async function onSubmit(values: ContactFormValues) {
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(values),
+    })
+
+    const result = (await response.json().catch(() => null)) as
+      | { error?: string }
+      | null
+
+    if (!response.ok) {
+      toast.error(result?.error ?? "Your message could not be sent.")
+      return
+    }
+
+    form.reset()
+    toast.success("Your message has been sent.")
   }
 
   return (
@@ -103,7 +109,7 @@ export function ContactForm() {
                     <FormControl>
                       <Textarea 
                         placeholder="Type your message here." 
-                        className="min-h-[150px]"
+                        className="min-h-37.5"
                         {...field} 
                       />
                     </FormControl>
@@ -111,7 +117,13 @@ export function ContactForm() {
                   </FormItem>
                 )}
               />
-              <Button type="submit" className="w-full">Send Message</Button>
+              <Button
+                type="submit"
+                className="w-full"
+                disabled={form.formState.isSubmitting}
+              >
+                {form.formState.isSubmitting ? "Sending..." : "Send Message"}
+              </Button>
             </form>
           </Form>
         </div>
