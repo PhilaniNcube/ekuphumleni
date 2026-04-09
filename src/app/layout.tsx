@@ -5,6 +5,7 @@ import { Yusei_Magic } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/navigation/navigation";
 import { Toaster } from "@/components/ui/sonner";
+import { UpdateNotice } from "@/components/update-notice";
 
 const yuseiMagic = Yusei_Magic({
   variable: "--font-yusei-magic",
@@ -96,6 +97,7 @@ export default function RootLayout({
         className={`${yuseiMagic.variable} ${gotham.variable} antialiased font-sans bg-brand-cream`}
       >
         <Navigation />
+        <UpdateNotice />
         {children}
         <Toaster />
       </body>
