@@ -97,7 +97,7 @@ export default function RootLayout({
         className={`${yuseiMagic.variable} ${gotham.variable} antialiased font-sans bg-brand-cream`}
       >
         <Navigation />
-        <UpdateNotice />
+        {/* <UpdateNotice /> */}
         {children}
         <Toaster />
       </body>
