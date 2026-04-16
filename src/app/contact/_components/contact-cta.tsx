@@ -12,7 +12,7 @@ export function ContactCTA() {
             Contact us today to learn more about how you can contribute to fighting poverty, crime, and community upliftment in Joe Slovo.
           </p>
           <Button asChild size="lg" variant="secondary">
-            <Link href="mailto:ayandaxalabile44@gmail.com">
+            <Link href="mailto:ayanda@ekuphumleninmb.org">
               Get in Touch Now
             </Link>
           </Button>

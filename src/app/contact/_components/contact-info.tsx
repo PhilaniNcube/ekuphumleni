@@ -1,6 +1,7 @@
 import Container from "@/components/container";
 import { Mail, MapPin, User } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import Link from "next/link";
 
 export function ContactInfo() {
   return (
@@ -26,9 +27,9 @@ export function ContactInfo() {
               </div>
               <div>
                 <h3 className="font-semibold mb-1 text-brand-white">Email</h3>
-                <a href="mailto:ayandaxalabile44@gmail.com" className="text-brand-white hover:text-brand-light-green transition-colors">
-                  ayandaxalabile44@gmail.com
-                </a>
+                <Link href="mailto:ayanda@ekuphumleninmb.org" className="text-brand-white transition-colors">
+                  ayanda@ekuphumleninmb.org
+                </Link>
               </div>
             </CardContent>
           </Card>
