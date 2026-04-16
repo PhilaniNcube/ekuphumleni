@@ -43,7 +43,8 @@ export function ContactInfo() {
                 <div>
                   <h3 className="font-semibold mb-1 text-brand-white">Location</h3>
                   <p className="text-brand-white text-sm">
-                    Gqeberha / Port Elizabeth
+                    9956 Sthweti Street<br />
+                    Joe Slovo, Despatch 6220
                   </p>
                 </div>
                 
